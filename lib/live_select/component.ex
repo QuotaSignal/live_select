@@ -222,6 +222,7 @@ defmodule LiveSelect.Component do
 
   @impl true
   def handle_event("selection_recovery", selection_from_client, socket) do
+    IO.inspect(selection_from_client, label: "selection_recovery")
     # selection recovery. If we are here, it means that the view has crashed
     # The values have been sent to the form by LV selection recovery and are now in the selection assigns
     # However, the label have been lost because selection recovery only sends the values.
